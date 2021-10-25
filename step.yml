@@ -59,5 +59,23 @@ inputs:
       is_expand: true
       is_required: true
       value_options: [true, false]
+  - lint_project: false
+    opts:
+      title: "lint project"
+      summary: Runs `lint project`.
+      description: |
+         Lints a workspace or a project that check whether they are well configured.
+      is_expand: true
+      is_required: true
+      value_options: [true, false]
+  - lint_code: false
+    opts:
+      title: "lint code"
+      summary: Runs `lint code`.
+      description: |
+         Lints the code of your projects using Swiftlint.
+      is_expand: true
+      is_required: true
+      value_options: [true, false]
 
 outputs:

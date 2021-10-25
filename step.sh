@@ -8,6 +8,18 @@ function log() {
 log "Installing Tuist ..."
 curl -Ls https://install.tuist.io | bash
 
+if ${lint_project}
+then
+    log "Linting project ..."
+    tuist lint project
+fi
+
+if ${lint_code}
+then
+    log "Linting code ..."
+    tuist lint code --strict
+fi
+
 if ${dependencies_fetch}
 then
     log "Fetching dependencies ..."
